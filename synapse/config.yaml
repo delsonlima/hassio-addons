@@ -1,5 +1,5 @@
 name: Matrix Synapse Server
-version: 0.2.3
+version: 0.2.4
 slug: synapse
 description: A secure and decentralized communication platform.
 init: false
