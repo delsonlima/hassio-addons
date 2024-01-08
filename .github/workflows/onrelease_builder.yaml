@@ -27,3 +27,8 @@ jobs:
 
       - name: Build addon
         uses: home-assistant/builder@master
+        with:
+          args: |
+            --${{ matrix.arch }} \
+            --image synapse \
+            --docker-hub "ghcr.io/${{ github.repository_owner }}/hassio-addons"
