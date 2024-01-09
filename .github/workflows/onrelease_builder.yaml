@@ -40,6 +40,6 @@ jobs:
           args: |
             --${{ matrix.arch }} \
             --target /data/synapse \
-            --image ${{ env.ADDON_FOLDER }} \
-            --docker-hub "ghcr.io/${{ github.repository_owner }}/hassio-addons" \
+            --image ${{ matrix.arch }} \
+            --docker-hub "ghcr.io/${{ github.repository_owner }}/hassio-addons/${{ env.ADDON_FOLDER }}" \
             --addon
