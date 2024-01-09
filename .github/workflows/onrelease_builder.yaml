@@ -1,5 +1,8 @@
 name: Docker Image CI
 
+env:
+  ADDON_FOLDER: "synapse"
+
 on:
   release:
     types:
@@ -18,6 +21,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Get addon information
+        id: info
+        uses: home-assistant/actions/helpers/info@master
+        with:
+          path: "./${{ env.ADDON_FOLDER }}"
+
       - name: Login to Github Container Registry
         uses: docker/login-action@v3
         with:
@@ -31,6 +40,6 @@ jobs:
           args: |
             --${{ matrix.arch }} \
             --target /data/synapse \
-            --image synapse \
+            --image ${{ env.ADDON_FOLDER }} \
             --docker-hub "ghcr.io/${{ github.repository_owner }}/hassio-addons" \
             --addon
