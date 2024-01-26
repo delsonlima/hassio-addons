@@ -81,7 +81,7 @@ jobs:
         run: |
           if [[ "${{ steps.info.outputs.architectures }}" =~ ${{ matrix.arch }} ]]; then
              echo "build_arch=true" >> $GITHUB_OUTPUT;
-             echo "image=$(echo ${{ steps.info.outputs.image }} | cut -d'/' -f3)" >> $GITHUB_OUTPUT;
+             echo "image=$(echo ${{ steps.info.outputs.image }} | cut -d'/' -f4)" >> $GITHUB_OUTPUT;
              if [[ -z "${{ github.head_ref }}" ]] && [[ "${{ github.event_name }}" == "push" ]]; then
                  echo "BUILD_ARGS=" >> $GITHUB_ENV;
              fi
@@ -107,5 +107,5 @@ jobs:
             --${{ matrix.arch }} \
             --target /data/${{ matrix.addon }} \
             --image "${{ steps.check.outputs.image }}" \
-            --docker-hub "ghcr.io/${{ github.repository_owner }}" \
+            --docker-hub "ghcr.io/${{ github.repository_owner }}/hassio-addons" \
             --addon
