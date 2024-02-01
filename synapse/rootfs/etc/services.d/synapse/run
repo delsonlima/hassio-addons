@@ -8,7 +8,7 @@ export LOG_LEVEL="trace"
 
 bashio::log.info "Checking Synapse configuration..."
 
-CONF_DATA_DIR="$(bashio::config 'data_dir')"
+CONF_DATA_DIR="/config"
 SERVER_NAME="$(bashio::config 'server_name')"
 REPORT_STATS="$(bashio::config 'report_stats')"
 
