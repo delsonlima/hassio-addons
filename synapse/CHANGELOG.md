@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.5.0
+
+- Change addon data directory
+- Add data folder migration script
+
 ## 0.4.0
 
 - Import repo structure from https://github.com/home-assistant/addons-example
