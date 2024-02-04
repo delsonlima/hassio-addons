@@ -1,5 +1,13 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.5.2
+
+- Fix: misconfigured data dir
+
+## 0.5.1
+
+- Fix: old paths in config files after migration
+
 ## 0.5.0
 
 - Change addon data directory
