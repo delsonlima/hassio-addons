@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Synapse Matrix homeserver
-version: "0.5.1"
+version: "0.5.2"
 slug: synapse
 description: Homeserver for Matrix (A secure and decentralized communication platform).
 url: "https://github.com/delsonlima/hassio-addons/tree/main/synapse"
